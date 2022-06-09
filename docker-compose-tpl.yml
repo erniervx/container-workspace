@@ -1,0 +1,17 @@
+version: '3' # This is the current version of docker-compose
+services:
+  SERVICE_NAME:
+    container_name: CONTAINER_NAME 
+    image: IMAGE_NAME
+    ports:
+      - "2222:22" # Port of virtual machine: Port of container
+    volumes:
+      - "CONTAINER_DATA_VOL"
+      - "CONTAINER_SOCK_VOL"
+    networks:
+      - net 
+networks: # Network creation
+  net:
+
+# Execution
+# docker-compose up -d
